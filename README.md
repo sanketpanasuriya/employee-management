@@ -1,24 +1,31 @@
-# README
+# Employee Management System
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Overview
+The project aims to develop a straightforward Ruby on Rails application designed for employee management. Users will have the capability to perform fundamental CRUD (Create, Read, Update, Delete) operations on employee records. Furthermore, the application will incorporate functionality to seamlessly import employee data from an external API and execute background processing for enhanced efficiency and scalability.
 
-Things you may want to cover:
+## Key Feature
+1. Access a list of all employees.
+2. Ability to add a new employee.
+3. Modify existing employee information.
+4. Remove an employee record.
+5. Import employees from an external API source.
+ 
+## Prerequisite
+- Ruby - 3.3.1
+- Rails - 7.1.3.3
+- SQLite
+- Redis (Redis 6+)
 
-* Ruby version
+## Setup
+1. Clone the repository
+    ```bash
+    git clone git@github.com:sanketpanasuriya/employee-management.git
+    ```
+2. bundle install
+3. rails db:create
+4. rails db:migrate
+5. rails server
+6. bundle exec sidekiq (start the sidekiq in new terminal for background jobs)
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## Run test cases
+- bundle exec rspec 
