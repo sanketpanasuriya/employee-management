@@ -6,5 +6,12 @@ Rails.application.routes.draw do
   get "up" => "rails/health#show", as: :rails_health_check
 
   # Defines the root path route ("/")
-  # root "posts#index"
+  
+  namespace :webhooks, path: 'api/v1' do
+    resources :employees, only: %i[index create show update destroy]
+  end
+  
+  resources :employees
+
+  root 'employees#index'
 end
